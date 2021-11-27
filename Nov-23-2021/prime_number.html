@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime_number</title>
+</head>
+<body>
+    <h2>Prime Number</h2>
+    <script>
+        // var num = 0;
+        const num = parseInt(prompt("Enter a positive number: "));
+        var flag = false;
+        if (num == 1) {
+            console.log("1 is neither prime nor composite number");
+        } else if (num > 1){
+            for (var i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+            if(flag == true){
+                alert('It is a prime number');
+            } else{
+                alert('It is not a prime number');
+            }
+        } else{
+            alert("It is not a prime number");
+        }
+    </script>
+</body>
+</html>

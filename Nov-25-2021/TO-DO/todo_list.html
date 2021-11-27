@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>Todo</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+            font-family: 'Kaushan Script', cursive;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <script>
+        //Creating an empty array for todo
+        var todo=[];
+
+        //Add an item to the array list or update the array
+        function add_to_list(new_item) {
+            todo.push(new_item);
+        }
+
+        //Show the items or the contents present in a array
+        function show_list() {
+            var todo_list="TO-DO-List\n";
+            for(var i = 0; i < todo.length; i = i + 1) {
+                todo_list = todo_list + i +". "+todo[i]+"\n";
+            }
+            console.log(todo_list);
+        }
+
+        //In the present items in the array, mark the items whose task are completed as checked
+        function mark_list_item(index){
+            for(var i=0;i<todo.length;i++){
+                if(index===i){
+                    todo[i]= " ✓ " + todo[i];
+                }
+            }
+        }
+
+        //In this function the user is asked to mention the index of the item to be updated or edited or replaced
+        function edit_list_item(i,edit){
+            todo[i]=edit;
+        }
+
+        //Delete the item which are present in the array based on the index entered by the user
+        function delete_list_item(index){
+            var deleted_value = todo.splice(index, 1)[0];
+            console.log("THe deleted value or item is: ",deleted_value);
+            console.log("The array after updating",todo);
+        }
+
+        //Adding items to the array todo list.
+        add_to_list("HTML");
+        add_to_list("CSS");
+        add_to_list("Javascript");
+        add_to_list("React");
+        add_to_list("Redux");
+
+        // Displaying items present in a list
+        show_list();
+
+        //Editing an item 
+        edit_list_item(3,"Node.js");
+
+        //Displaying the array list after editing the value of index 3
+        show_list();
+
+        //Adding a check mark for the item which is completed
+        mark_list_item(0);
+        mark_list_item(1);
+
+        //Displaying the array list after the checkmark is added
+        show_list();
+
+        //Deleting the item from a list
+        delete_list_item(1);
+
+        //Displaying the array list after deletion of item in index 3
+        show_list();
+    </script>
+</body>
+</html>

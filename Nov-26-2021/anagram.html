@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anagram</title>
+</head>
+<body>
+    <h2>Anagram</h2>
+    <script>
+        function anagram(str1, str2){
+            let l1 = str1.length;
+            let l2 = str2.length;
+            if (l1 != l2){
+                console.log("The given strings are not of the same length or Invalid");
+                return;
+            }
+            st1 = str1.split('').sort().join('');
+            st2 = str2.split('').sort().join('');
+            if (st1 == st2){
+                console.log("The given strings", str1 ,"and", str2, "are anagram");
+            }else{
+                console.log("The given strings", str1 ,"and", str2, "are not anagram");
+            }
+        }
+        var str1 = prompt("Enter string 1");
+        var str2 = prompt("Enter string 2");
+        anagram(str1, str2);
+    </script>
+</body>
+</html>

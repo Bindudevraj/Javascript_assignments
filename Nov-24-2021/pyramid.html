@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyramid</title>
+    <style></style>
+</head>
+
+<body>
+    <h2>Pyramid</h2>
+    <script>
+        // function half_tri(n){
+        //     for(let i=1; i<=n; i++){
+        //         let out_str = " ";
+        //         for(let j=1; j< n-i; j++){
+        //             out_str = out_str + " ";
+        //         }
+        //         for(let k=0; k<= (2*i)-1; k++){
+        //             out_str = out_str + "*";
+        //         }
+        //         console.log(out_str)
+        //     }
+        // }
+        // var n = parseInt(prompt("Enter number of rows"));
+        // half_tri(n);
+
+        let n = prompt("Enter a number");
+        let i, j, k;
+        for(i=1; i<=n; i++){
+            let stars = " ";
+            for(k=1; k<=(n-i) ; k++){
+                stars = stars + " ";
+            }
+            for(j=0; j< (2*i)-1; j++){
+                stars = stars + "*";
+            }
+            console.log(stars);
+        }
+        
+    </script>
+</body>
+
+</html>

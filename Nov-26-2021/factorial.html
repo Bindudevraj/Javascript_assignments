@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+</head>
+<body>
+    <h2>Factorial</h2>
+    <script>
+        function fact(num){
+            fac=1;
+            if(num < 0){
+                console.log("Negative number");
+            }else if (num == 0){
+                console.log("The factorial of 0 is 1");
+            }else{
+                for(var i = 1; i <= num; i++){
+                    fac = fac * i;
+                }
+            console.log("The factorial of", num ,"is", fac);
+            }
+        }
+        var num = parseInt(prompt("Enter the number"));
+        fact(num);
+    </script>
+</body>
+</html>
